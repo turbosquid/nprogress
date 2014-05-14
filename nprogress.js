@@ -238,7 +238,8 @@
       spinner && removeElement(spinner);
     }
 
-    document.body.appendChild(progress);
+    var location = document.getElementById(Settings.parentElement) || document.body;
+    location.appendChild(progress);
     return progress;
   };
 
@@ -466,4 +467,3 @@
 
   return NProgress;
 });
-
